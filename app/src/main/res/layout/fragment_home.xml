@@ -5,25 +5,88 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#e8e8e8"
-        android:gravity="center_vertical"
-        >
-        <TextView
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:id="@+id/toolbar"
+            android:elevation="20dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Wallpaper X"
+                android:textSize="29sp"
+                android:textColor="@color/wallpaperPrimary"
+                android:fontFamily="@font/bold"
+                android:layout_marginStart="20dp"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Wallpaper X"
-            android:textSize="29sp"
-            android:textColor="@color/wallpaperPrimary"
-            android:fontFamily="@font/bold"
+            android:id="@+id/bom"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical"
             android:layout_marginStart="20dp"
-            />
+            android:layout_marginTop="15dp">
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Best of the Month"
+                android:textSize="18sp"
+                android:textColor="@color/wallpaperPrimary"
+                android:fontFamily="@font/ragular"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerView_BOM"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/theColorTone"
+            android:layout_below="@+id/bom"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp">
 
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Color Tone"
+                android:textSize="18sp"
+                android:textColor="@color/wallpaperPrimary"
+                android:fontFamily="@font/ragular"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_tct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
 
 </FrameLayout>
