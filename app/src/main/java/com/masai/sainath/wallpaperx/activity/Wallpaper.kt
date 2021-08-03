@@ -18,6 +18,7 @@ import kotlinx.coroutines.*
 import java.io.File
 import java.io.IOException
 import java.io.OutputStream
+import java.net.URI
 import java.net.URL
 import java.util.*
 

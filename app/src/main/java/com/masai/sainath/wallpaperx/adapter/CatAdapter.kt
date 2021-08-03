@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.masai.sainath.wallpaperx.R
+import com.masai.sainath.wallpaperx.activity.Category
 import com.masai.sainath.wallpaperx.activity.Wallpaper
 import com.masai.sainath.wallpaperx.model.CatModel
 

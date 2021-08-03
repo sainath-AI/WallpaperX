@@ -55,4 +55,7 @@ dependencies {
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
 }

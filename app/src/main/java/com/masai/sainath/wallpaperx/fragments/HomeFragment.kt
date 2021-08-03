@@ -61,8 +61,6 @@ import com.masai.sainath.wallpaperx.model.theColorTone
 
         }
 
-
-
         return binding.root
     }
 
