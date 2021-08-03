@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
         android:background="@drawable/bottomshape"
+        android:elevation="20dp"
         android:id="@+id/linearlayout"
         android:layout_height="50dp">
 

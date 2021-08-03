@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.masai.sainath.wallpaperx.adapter.BomAdapter
+import com.masai.sainath.wallpaperx.adapter.CatAdapter
 import com.masai.sainath.wallpaperx.adapter.TctAdapter
 import com.masai.sainath.wallpaperx.databinding.FragmentHomeBinding
 import com.masai.sainath.wallpaperx.model.BomModel
+import com.masai.sainath.wallpaperx.model.CatModel
 import com.masai.sainath.wallpaperx.model.theColorTone
 
 
@@ -48,6 +51,16 @@ import com.masai.sainath.wallpaperx.model.theColorTone
 
 
         }
+        database.collection("categories").addSnapshotListener { value, error ->
+            val listOfCategories= arrayListOf<CatModel>()
+            val data =value?.toObjects(CatModel::class.java)
+            listOfCategories.addAll(data!!)
+            binding.recyclerViewCat.layoutManager=GridLayoutManager(requireContext(),2)
+            binding.recyclerViewCat.adapter= CatAdapter(requireContext(),listOfCategories)
+
+
+        }
+
 
 
         return binding.root
